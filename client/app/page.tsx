@@ -10,9 +10,15 @@ export default function Home() {
 
   useEffect(() => {
     if (session) {
-      router.push('/admin')
+      router.replace('/admin')
     }
   }, [session, router])
+
+  useEffect(() => {
+    if (status === 'authenticated') {
+      router.replace('/admin')
+    }
+  }, [status, router])
 
   if (status === 'loading') {
     return (
