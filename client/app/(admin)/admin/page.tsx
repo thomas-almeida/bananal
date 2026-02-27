@@ -61,7 +61,7 @@ export default function AdminPage() {
 
   useEffect(() => {
     if (status === 'unauthenticated') {
-      window.location.href = '/login'
+      window.location.href = '/'
     }
   }, [status])
 
@@ -192,7 +192,7 @@ export default function AdminPage() {
               </a>
             )}
             <button
-              onClick={() => signOut({ callbackUrl: '/login' })}
+              onClick={() => signOut({ callbackUrl: '/' })}
               className="text-sm text-gray-500 hover:text-gray-700"
             >
               Sair
